@@ -1,0 +1,29 @@
+<!-- src/app/home/home.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Weather App
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Enter City</ion-label>
+    <ion-input [(ngModel)]="city" type="text"></ion-input>
+  </ion-item>
+
+  <ion-button (click)="getWeather()">Get Weather</ion-button>
+
+  <ion-card *ngIf="weather">
+    <ion-card-header>
+      {{ weather.name }}, {{ weather.sys.country }}
+    </ion-card-header>
+    <ion-card-content>
+      <ion-icon [name]="weatherIcon"></ion-icon>
+      <p>Temperature: {{ weather.main.temp }}°C</p>
+      <p>Humidity: {{ weather.main.humidity }}%</p>
+      <p>Conditions: {{ weather.weather[0].description }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
