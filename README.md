@@ -6,3 +6,5 @@ following functionality:
  Display the current weather information, including temperature, humidity, and weather
 conditions.
  Provide a visual representation (icon or image) of the weather conditions.
+
+Email : sanjantailor16@gmail.com
